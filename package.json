@@ -1,0 +1,77 @@
+{
+    "name": "calendario.mamforni.it",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "@tinymce/tinymce-vue": "^1.1.0",
+        "@vue/cli": "^3.9.3",
+        "@vue/cli-service-global": "^4.2.3",
+        "babel": "^6.23.0",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "core-js": "^3.6.4",
+        "material-design-icons": "^3.0.1",
+        "moment": "^2.22.2",
+        "moment-timezone": "^0.5.26",
+        "muse-ui": "^3.0.1",
+        "register-service-worker": "^1.6.2",
+        "terser": "^3.17.0",
+        "tester": "^1.4.4",
+        "vue": "^2.6.10",
+        "vue-localforage": "^0.2.5",
+        "vue-moment": "^4.0.0",
+        "vue-mq": "^0.2.1",
+        "vue-resource": "^1.5.1",
+        "vue-router": "^3.0.7",
+        "vue-upload-multiple-image": "^1.1.4",
+        "vue2-editor": "^2.9.1"
+    },
+    "devDependencies": {
+        "@babel/polyfill": "^7.8.7",
+        "@vue/cli-plugin-babel": "^3.9.2",
+        "@vue/cli-plugin-eslint": "^4.2.3",
+        "@vue/cli-plugin-pwa": "^3.9.0",
+        "@vue/cli-service": "^4.2.3",
+        "gulp": "^4.0.2",
+        "gulp-minify": "^3.1.0",
+        "gulp-watch": "^5.0.1",
+        "node-sass": "^6.0.1",
+        "vue-session": "^1.0.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "rules": {},
+        "parserOptions": {
+            "parser": "babel-eslint"
+        }
+    },
+    "vue/no-use-v-if-with-v-for": [
+        "error",
+        {
+            "allowUsingIterationVar": false
+        }
+    ],
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}

@@ -1,0 +1,161 @@
+.mu-dialog .dialog-foot {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    width: calc(100% - 50px);
+
+    .mu-button {
+        margin: 6px 16px;
+        margin-left: 0px;
+
+        &:last-of-type {
+            margin-left: auto;
+            margin-right: 0px;
+        }
+    }
+}
+
+.history-table {
+    margin-bottom: 70px;
+
+    .mu-table-empty {
+        font-size: 0px;
+        color: var(--color-gray2);
+
+        &::before {
+            content: 'Qui non c\'è nulla 🧐 !!';
+            font-size: 16px;
+        }
+    }
+
+    .mu-table-header-wrapper,
+    .mu-table-footer-wrapper {
+        overflow: visible;
+    }
+
+    .mu-table-header-wrapper .mu-table-header thead tr {
+        height: auto;
+        color: var(--color-white);
+        background: var(--color-orange);
+
+        th {
+            height: auto;
+            padding: 5px 10px;
+            color: var(--color-white);
+            font-family: Roboto, Lato, sans-serif;
+            line-height: 1.5;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    .mu-table-body-wrapper .mu-table-body {
+        tbody * {
+            font-family: Roboto, Lato, sans-serif;
+            line-height: 1.5;
+            font-size: 16px;
+            font-weight: 400;
+            height: auto;
+            margin: 0;
+            color: var(--color-gray2);
+        }
+
+        > tbody > tr {
+            &:not(.mu-table-expand-row) > td {
+                padding: 5px 10px;
+                word-break: break-word;
+            }
+
+            &.mu-table-expand-row > td.is-expand {
+                padding: 15px 10px;
+            }
+
+            &:not(.mu-table-expand-row) {
+                border-bottom: 0px;
+
+                > td {
+                    border-bottom: 0px;
+                }
+            }
+
+            &.mu-table-expand-row > td {
+                border-top: dashed 2px transparent;
+                border-bottom: solid 2px;
+
+                &.is-expand {
+                    border-top: dashed 2px var(--color-gray2);
+                }
+            }
+
+            cursor: pointer;
+        }
+    }
+
+    .history-details-table {
+        width: 100%;
+
+        thead {
+            display: block;
+
+            tr {
+                display: flex;
+                height: auto;
+                color: var(--color-white);
+                background: var(--color-orange);
+
+                th {
+                    &:first-of-type {
+                        display: inline-block;
+                        max-width: 155px;
+                        min-width: 155px;
+                    }
+
+                    flex-grow: 1;
+                    width: calc(50% - 155px);
+                    height: auto;
+                    padding: 5px 10px;
+                    color: var(--color-white) !important;
+                    font-family: Roboto,
+                    Lato,
+                    sans-serif;
+                    line-height: 1.5;
+                    font-size: 16px;
+                    font-weight: 600 !important;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        tbody tr {
+            display: flex;
+            flex-wrap: wrap;
+            border: solid 1px !important;
+            margin: 1px;
+
+            td {
+                height: 100%;
+
+                &:nth-of-type(1) {
+                    display: inline-block;
+                    max-width: 155px;
+                    min-width: 155px;
+                    padding: 10px;
+                    border-right: solid 1px;
+                    white-space: normal;
+                    word-break: break-word;
+                    background: var(--color-gray);
+                }
+
+                flex-grow: 1;
+                display: inline-block;
+                width: calc(50% - 155px);
+                height: auto;
+                min-height: unset;
+                padding: 10px;
+                margin: 0;
+            }
+        }
+    }
+}

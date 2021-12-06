@@ -1,0 +1,115 @@
+.order-lav-filter-dialog {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .mu-dialog {
+        position: relative;
+        width: 90%;
+        max-width: 760px;
+        padding-bottom: 20px;
+        margin: 10vw auto 10vw;
+
+        .loader {
+            position: absolute;
+            top: 76px;
+            width: calc(100% - 50px);
+            height: calc(100% - 159px);
+        }
+
+        .mu-dialog-actions {
+            position: absolute;
+            bottom: 18px;
+            right: 15px;
+        }
+
+        .mu-dialog-title {
+            padding: 28px 24px 20px;
+        }
+
+        .mu-dialog-body {
+            padding-bottom: 60px;
+        }
+
+        .filter-form {
+
+            .form-body {
+                .form-table {
+                    width: 100%;
+
+                    tr {
+                        display: flex;
+
+                        td {
+                            display: flex;
+                            flex-grow: 1;
+                            width: 50%;
+                            border: solid 1px;
+                            text-align: left;
+                            overflow: hidden;
+                            margin: 1px;
+
+                            .td-wrap {
+                                display: flex;
+                                width: 100%;
+
+                                > b {
+                                    display: inline-block;
+                                    max-width: 155px;
+                                    min-width: 155px;
+                                    padding: 10px;
+                                    border-right: solid 1px;
+                                    white-space: nowrap;
+                                    background: var(--color-gray);
+                                }
+                            }
+
+                            &[colspan="2"]:nth-of-type(2) .td-wrap > b {
+                                min-width: 96px;
+                            }
+                        }
+
+                        td {
+                            .mu-form-item {
+                                flex-grow: 1;
+                                display: inline-block;
+                                height: auto;
+                                min-height: unset;
+                                padding: 5px 10px;
+                                margin: 0;
+
+                                p {
+                                    padding: 5px 0px;
+                                    margin-bottom: 0px;
+                                }
+
+                                .mu-form-item-help {
+                                    position: relative;
+                                    left: 0px !important;
+                                }
+
+                                .mu-text-field-input {
+                                    height: auto;
+                                }
+                            }
+
+                            .mu-input .mu-select-content {
+                                height: auto;
+                                min-height: unset;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-foot {
+                position: absolute;
+                bottom: 20px;
+                left: 25px;
+                width: calc(100% - 50px);
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    }
+}

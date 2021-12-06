@@ -1,0 +1,1 @@
+.login .page-wrapper,.logout .page-wrapper{display:flex;align-items:center;justify-content:center;height:calc(100vh - 66px)}.login .auth .mu-paper,.logout .auth .mu-paper{max-width:350px;padding:20px 20px 20px;margin:0 auto}.login-form .mu-form-item:last-of-type{padding-bottom:0px;margin-top:30px;margin-bottom:0px}.login-form .mu-form-item .btn-login{margin:0px}

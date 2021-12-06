@@ -1,0 +1,226 @@
+@import 'config/mixin';
+
+/** COLORI **/
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray: #fafafa;
+    --color-gray2: #5c6b80;
+    --color-gray3: #EEEEEE;
+    --color-red: #962c1c;
+    --color-yellow: #eab819;
+    --color-orange: #ed5116;
+    --color-green: #388e3c;
+    --color-blue: #474787;
+}
+
+/** TIPOGRAPHY **/
+
+h1 {
+    margin: 0px 0px 20px;
+    font-size: 4em;
+    color: var(--color-red);
+}
+
+h2 {
+    margin: 0px 0px 20px;
+    font-size: 3.5em;
+    color: var(--color-red);
+}
+
+h3 {
+    margin: 0px 0px 20px;
+    font-size: 3em;
+    color: var(--color-red);
+}
+
+h4 {
+    margin: 0px 0px 20px;
+    font-size: 2.5em;
+    color: var(--color-red);
+}
+
+h5 {
+    margin: 0px 0px 20px;
+    font-size: 2em;
+    color: var(--color-red);
+}
+
+p {
+    margin: 0px 0px 5px;
+}
+
+a {
+    color: var(--color-red);
+    text-decoration: underline;
+}
+
+.print-block {
+    display: none !important;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 65px;
+    font-family: 'Roboto';
+    color: var(--color-gray2);
+    font-size: 16px !important;
+    background: var(--color-gray);
+}
+
+/** HEADER **/
+
+header.header {
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: var(--color-white);
+}
+
+header.header .page-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px
+}
+
+header.header h1 {
+    margin: 0px;
+    margin-right: 20px;
+}
+
+header.header h1 a {
+    display: block;
+    cursor: pointer;
+}
+
+header.header h1 a img {
+    display: block;
+    width: 100px;
+}
+
+header.header h5 {
+    margin: 0;
+    font-size: 20px
+}
+
+header.header .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header.header .menu a {
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 2px;
+    color: var(--color-red);
+}
+
+header.header #search {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    text-align: left;
+    padding: 10px 20px 0px;
+    box-shadow: 0px 2px 4px -3px var(--color-black);
+    background-color: var(--color-yellow);
+    .mu-input {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        input {
+            color: var(--color-white);
+        }
+        .mu-input-line,
+        .mu-input-focus-line {
+            background-color: var(--color-white);
+        }
+    }
+}
+
+/** COMPONENTS **/
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: unset !important;
+}
+
+.mu-option.is-selected .mu-item {
+    color: var(--color-orange) !important;
+}
+
+.mu-step-label.active .mu-step-label-circle, 
+.mu-step-label.completed .mu-step-label-circle {
+    background-color: var(--color-green) !important;
+}
+
+.mu-popover .mu-list .mu-select-no-data {
+    font-size: 0px
+}
+
+.mu-popover .mu-list .mu-select-no-data::after {
+    content: 'Nessun risultato trovato!';
+    font-size: 16px;
+}
+
+.mu-tooltip {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.mu-checkbox-checked .mu-checkbox-icon-checked {
+    fill: var(--color-orange);
+}
+
+@media print {
+    .print-block {
+        display: block !important;
+    }
+    .print-none {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px), (min-device-pixel-ratio: 2) and (max-width: 1536px) {
+    header.header h5 {
+        display: none;
+    }
+    header.header .menu .menu-item .mu-flat-button {
+        min-width: unset;
+    }
+    header.header .menu .menu-item .mu-flat-button .mu-button-wrapper {
+        font-size: 0px;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 680px), (min-device-pixel-ratio: 2) and (max-width: 1360px) {
+    header.header .menu a.auth .mu-button {
+        min-width: 0px;
+        font-size: 0px;
+    }
+    header.header .menu a.auth .mu-button .mu-icon {
+        margin-right: 0px;
+    }
+}

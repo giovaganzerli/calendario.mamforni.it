@@ -1,0 +1,20 @@
+{
+    "name": "MAM Forni | Calendario",
+    "short_name": "Calendario",
+    "icons": [
+        {
+            "src": "/dist/img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/dist/img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/dist/#/",
+    "display": "standalone",
+    "background_color": "#FAFAFA",
+    "theme_color": "#ed5116"
+}
